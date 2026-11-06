@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "eyebrow": "THE PEOPLE BEHIND THE PAWS",
+    "heading": "Hi, I’m",
+    "emphasis": "Ryle.",
+    "tagline": [
+      "Big hearts. Open arms.",
+      "Second chances."
+    ],
+    "introduction": "I created Good Paws Rescue because I believe every animal deserves kindness, care, and a chance to find a loving home.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Two happy dogs spending time together outdoors"
+    }
+  },
+  "mission": {
+    "eyebrow": "WHAT WE BELIEVE",
+    "heading": "Every animal deserves to be met with",
+    "emphasis": "kindness.",
+    "paragraphs": [
+      "I believe every animal deserves to feel safe, cared for, and loved. A difficult beginning should never decide the rest of their story.",
+      "That belief is what inspired me to create Good Paws: a place built around second chances and finding animals a home where they belong."
+    ]
+  }
+}

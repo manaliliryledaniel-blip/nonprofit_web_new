@@ -1,0 +1,50 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #282638;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  scroll-behavior: smooth;
+
+  --ink: #282638;
+  --muted: #666574;
+  --blue: #454cc8;
+  --deep-blue: #30388f;
+  --orange: #f0785f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  color: #fff;
+  background: var(--blue);
+}
+
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
