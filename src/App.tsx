@@ -11,21 +11,6 @@ type DonationApiResponse = {
   payment_status?: string
 }
 
-async function readDonationApiResponse(response: Response): Promise<DonationApiResponse> {
-  try {
-    return await response.json() as DonationApiResponse
-  } catch {
-    if (!response.ok) {
-      return {
-        error: response.status === 502
-          ? 'The donation API is unreachable. Start it with npm run server, then try again.'
-          : 'The donation service returned an unexpected response. Please try again.',
-      }
-    }
-    throw new Error('The server returned an invalid response. Please try again.')
-  }
-}
-
 const programs = [
   {
     number: '01',
@@ -46,6 +31,21 @@ const programs = [
     icon: 'paw',
   },
 ]
+
+async function readDonationApiResponse(response: Response): Promise<DonationApiResponse> {
+  try {
+    return await response.json() as DonationApiResponse
+  } catch {
+    if (!response.ok) {
+      return {
+        error: response.status === 502
+          ? 'The donation API is unreachable. Start it with npm run server, then try again.'
+          : 'The donation service returned an unexpected response. Please try again.',
+      }
+    }
+    throw new Error('The server returned an invalid response. Please try again.')
+  }
+}
 
 function App() {
   const [page, setPage] = useState<Page>(() =>
@@ -117,7 +117,7 @@ function HomePage({ navigate }: { navigate: PageLinkHandler }) {
               Meet your match <span aria-hidden="true">↗</span>
             </a>
             <a className="text-link" href="/about" onClick={(event) => navigate(event, 'about')}>
-              Our story <span aria-hidden="true">→</span>
+              My story <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
@@ -342,6 +342,8 @@ function DonationForm() {
 }
 
 function AboutPage() {
+  const highlightCards = aboutContent.highlights ?? []
+
   return (
     <main className="about-page">
       <section className="about-hero">
@@ -364,15 +366,34 @@ function AboutPage() {
       </section>
 
       <section className="about-mission section-wrap">
-        <div className="section-label">{aboutContent.mission.eyebrow}</div>
+        <div className="section-label">My focus</div>
         <div className="mission-content">
-          <h2>{aboutContent.mission.heading} <em>{aboutContent.mission.emphasis}</em></h2>
+          <h2>Driven by curiosity,<br /><em>grounded in growth.</em></h2>
           <div>
-            {aboutContent.mission.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            <p>
+              I’m a student with a strong interest in web development and software engineering,
+              especially the kind of work that turns ideas into practical, useful experiences.
+            </p>
+            <p>
+              I enjoy learning how to build clean interfaces, solve real problems with logic,
+              and keep improving the way I think as a developer.
+            </p>
           </div>
         </div>
       </section>
 
+      <section className="about-highlights section-wrap">
+        <div className="section-label">What I bring</div>
+        <div className="about-cards">
+          {highlightCards.map((card) => (
+            <article className="about-card" key={card.title}>
+              <span className="about-card-label">{card.label}</span>
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
     </main>
   )
 }

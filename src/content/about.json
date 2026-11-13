@@ -1,25 +1,33 @@
 {
   "hero": {
-    "eyebrow": "THE PEOPLE BEHIND THE PAWS",
+    "eyebrow": "STUDENT PROFILE",
     "heading": "Hi, I’m",
-    "emphasis": "Ryle.",
+    "emphasis": "Ryle Daniel F. Manalili",
     "tagline": [
-      "Big hearts. Open arms.",
-      "Second chances."
+      "Information Technology student",
+      "Builder of practical digital solutions."
     ],
-    "introduction": "I created Good Paws Rescue because I believe every animal deserves kindness, care, and a chance to find a loving home.",
+    "introduction": "I’m currently pursuing a Bachelor of Science in Information Technology (BSIT), with a strong focus on web development, software engineering, and creating technology that solves real-world problems.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=85",
-      "alt": "Two happy dogs spending time together outdoors"
+      "src": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85",
+      "alt": "A student working with a laptop and projects in a collaborative environment"
     }
   },
-  "mission": {
-    "eyebrow": "WHAT WE BELIEVE",
-    "heading": "Every animal deserves to be met with",
-    "emphasis": "kindness.",
-    "paragraphs": [
-      "I believe every animal deserves to feel safe, cared for, and loved. A difficult beginning should never decide the rest of their story.",
-      "That belief is what inspired me to create Good Paws: a place built around second chances and finding animals a home where they belong."
-    ]
-  }
+  "highlights": [
+    {
+      "title": "Academic Journey",
+      "label": "BSIT",
+      "description": "I am currently pursuing a Bachelor of Science in Information Technology, where I continue building a strong foundation in problem-solving, systems thinking, and software development."
+    },
+    {
+      "title": "Technical Focus",
+      "label": "Web & Software",
+      "description": "My work focuses on web development, software engineering, and creating efficient, user-friendly solutions that respond to real needs and modern digital challenges."
+    },
+    {
+      "title": "Career Goals",
+      "label": "Future Path",
+      "description": "I aim to grow as a developer who builds meaningful technology, contributes to impactful projects, and continues learning in both engineering and design."
+    }
+  ]
 }
